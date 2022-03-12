@@ -707,7 +707,7 @@ export default {
           type: 'HP',
         });
       }
-      
+
       if (vulnMult < 1) {
         mods.push({
           title: 'Vulnerabilities',

@@ -707,18 +707,7 @@ export default {
           type: 'HP',
         });
       }
-
-      if (immuneMult > 1) {
-        mods.push({
-          title: 'Immunities',
-          subtitle: `${this.monster.immunities.length} Immunit${
-            this.monster.immunities.length === 1 ? 'y' : 'ies'
-          } at CR ${this.offensiveCr.cr}`,
-          value: `x${immuneMult}`,
-          type: 'HP',
-        });
-      }
-
+      
       if (vulnMult < 1) {
         mods.push({
           title: 'Vulnerabilities',
@@ -726,6 +715,16 @@ export default {
             this.monster.vulnerabilities.length === 1 ? 'y' : 'ies'
           } at CR ${this.offensiveCr.cr}`,
           value: `x${vulnMult}`,
+          type: 'HP',
+        });
+      }
+      else if (immuneMult > 1) {
+        mods.push({
+          title: 'Immunities',
+          subtitle: `${this.monster.immunities.length} Immunit${
+            this.monster.immunities.length === 1 ? 'y' : 'ies'
+          } at CR ${this.offensiveCr.cr}`,
+          value: `x${immuneMult}`,
           type: 'HP',
         });
       }
